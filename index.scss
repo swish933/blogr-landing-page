@@ -1,0 +1,88 @@
+$bg-lightred: hsla(13, 100%, 72%, 0.95);
+$bg-red: hsl(353, 100%, 62%);
+$bg-darkblue: hsl(237, 17%, 21%);
+$bg-lightblue: hsl(237, 23%, 32%);
+$footer-bg: hsl(240, 10%, 16%);
+$text-white: hsl(0, 0%, 100%);
+$text-blue: hsl(208, 49%, 24%);
+$text-red: hsl(356, 100%, 66%);
+$footer-text-gray: hsl(240, 2%, 79%);
+$body-text-blue: hsl(207, 13%, 34%);
+$hover-red: hsl(355, 100%, 74%);
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100%;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+.header {
+	width: 100%;
+	height: 65vh;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	background-image: url(/images/bg-pattern-intro.svg),
+		linear-gradient(120deg, $bg-lightred 25%, $bg-red 59%);
+	background-repeat: no-repeat;
+	background-position: 30% center, center;
+	background-size: 160% auto;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	margin-top: 1em;
+	width: 90%;
+	max-width: 67rem;
+
+	& ul {
+		display: flex;
+		list-style: none;
+	}
+
+	&__item {
+		margin: 0 1.2em 0 0;
+		color: $text-white;
+	}
+
+	&__auth {
+		margin-left: auto;
+
+		& button {
+			background-color: $text-white;
+			margin-left: 0.6em;
+			border: none;
+			border-radius: 1.4em;
+			padding: 0.8em 1.6em;
+		}
+	}
+}
+
+.arrow_icon {
+	margin-left: 3px;
+}
+
+// // ********INTRO*******//
+
+// .intro {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+
+// 	&__header {
+// 		margin: 1em 0 0;
+// 	}
+// }
