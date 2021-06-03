@@ -25,7 +25,6 @@ body {
 a:link,
 a:visited {
 	text-decoration: none;
-	color: white;
 }
 
 .header {
@@ -46,23 +45,38 @@ a:visited {
 	align-items: center;
 	margin-top: 1em;
 	width: 90%;
-	max-width: 67rem;
+	max-width: 70rem;
 
 	& ul {
 		display: flex;
 		list-style: none;
+		// border: 1px solid;
+		padding: 0;
+		margin-left: 2em;
+	}
+
+	& li {
+		margin: 0 1.3em;
+		position: relative;
 	}
 
 	&__item {
-		margin: 0 1.2em 0 0;
+		padding-top: 0;
 		color: $text-white;
+		position: relative;
 	}
 
 	&__auth {
 		margin-left: auto;
+		border: 1px solid;
+
+		& a {
+			color: $text-white;
+		}
 
 		& button {
 			background-color: $text-white;
+			color: $text-red;
 			margin-left: 0.6em;
 			border: none;
 			border-radius: 1.4em;
@@ -71,18 +85,37 @@ a:visited {
 	}
 }
 
+.dropdown {
+	display: none;
+	background-color: $text-white;
+	flex-direction: column;
+	position: absolute;
+	left: -10px;
+	padding: 1em 1.5em;
+	border-radius: 0.3em;
+
+	&__item {
+		color: $body-text-blue;
+		margin: 0.5em 0;
+	}
+}
+
 .arrow_icon {
 	margin-left: 3px;
 }
 
-// // ********INTRO*******//
+.show {
+	display: flex;
+}
 
-// .intro {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
+// ********INTRO*******//
 
-// 	&__header {
-// 		margin: 1em 0 0;
-// 	}
-// }
+.intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__header {
+		margin: 1em 0 0;
+	}
+}

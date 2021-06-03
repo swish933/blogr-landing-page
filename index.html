@@ -18,35 +18,38 @@
         <div class="nav">
             <a href="#" class="nav__logo"><img src="/images/logo.svg" alt="brand logo"></a>
             <ul>
-                <li class="nav__item">
-                    <p>Product<span class=arrow_icon><img src="/images/icon-arrow-light.svg" alt="dropdown icon"></span>
+                <li onclick="dropDown('productDropdown')">
+                    <p class="nav__item">Product<span class=arrow_icon><img src="/images/icon-arrow-light.svg"
+                                alt="dropdown icon"></span>
                     </p>
-                    <!-- <div class='dropdown'>
+                    <div class='dropdown' id="productDropdown">
                         <a href="#" class="dropdown__item">Overview</a>
                         <a href="#" class="dropdown__item">Pricing</a>
                         <a href="#" class="dropdown__item">Marketplace</a>
                         <a href="#" class="dropdown__item">Features</a>
                         <a href="#" class="dropdown__item">Integrations</a>
-                    </div> -->
+                    </div>
                 </li>
-                <li class="nav__item">
-                    <p>Company<span class=arrow_icon><img src="/images/icon-arrow-light.svg" alt="dropdown icon"></span>
+                <li onclick="dropDown('companyDropdown')">
+                    <p class="nav__item">Company<span class=arrow_icon><img src="/images/icon-arrow-light.svg"
+                                alt="dropdown icon"></span>
                     </p>
-                    <!-- <div class='dropdown'>
+                    <div class='dropdown' id="companyDropdown">
                         <a href="#" class="dropdown__item">About</a>
                         <a href="#" class="dropdown__item">Team</a>
                         <a href="#" class="dropdown__item">Blog</a>
                         <a href="#" class="dropdown__item">Careers</a>
-                    </div> -->
+                    </div>
                 </li>
-                <li class="nav__item">
-                    <p>Connect<span class=arrow_icon><img src="/images/icon-arrow-light.svg" alt="dropdown icon"></span>
+                <li onclick="dropDown('connectDropdown')">
+                    <p class="nav__item">Connect<span class=arrow_icon><img src="/images/icon-arrow-light.svg"
+                                alt="dropdown icon"></span>
                     </p>
-                    <!-- <div class='dropdown'>
+                    <div class='dropdown' id="connectDropdown">
                         <a href="#" class="dropdown__item">Contact</a>
                         <a href="#" class="dropdown__item">Newsletter</a>
                         <a href="#" class="dropdown__item">LinkedIn</a>
-                    </div> -->
+                    </div>
                 </li>
             </ul>
 
@@ -55,15 +58,16 @@
                 <button>Sign Up</button>
             </div>
         </div>
-        <!-- <div class="intro">
+        <div class="intro">
             <h1 class="intro__header">A modern publishing platform</h1>
             <p>Grow your audience and build your online brand</p>
             <div>
                 <button>Start for Free</button>
                 <button>Learn More</button>
             </div>
-        </div> -->
+        </div>
     </div>
+    <script src="./index.js"></script>
 </body>
 
 
