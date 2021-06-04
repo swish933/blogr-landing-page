@@ -17,10 +17,12 @@
     <header>
         <div class="header__mobile">
             <a href="#" class="brand__logo"><img src="/images/logo.svg" alt="brand logo"></a>
-            <label for="nav__toggle" class="nav__toggle"><span></span></label>
+            <div class="b1" onclick="toggleNav()">
+                <p class="nav__toggle"><span></span></p>
+            </div>
         </div>
 
-        <nav class="nav">
+        <nav class="nav" id="nav">
             <ul>
                 <li onclick="dropDown('productDropdown')">
                     <p class="nav__item">Product<span class=arrow__icon><img src="/images/icon-arrow-light.svg"
