@@ -35,7 +35,6 @@ header {
 }
 
 .nav {
-  display: none;
   position: absolute;
   width: 83%;
   max-width: 33rem;
@@ -48,12 +47,17 @@ header {
   background-color: white;
   border-radius: 0.3em;
   padding: 0.6em 1.3em 1em;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 300ms ease-in-out;
 }
 .nav ul {
+  list-style: none;
   margin-bottom: 1.5em;
   padding: 0em 0.8em 1.3em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  list-style: none;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
 .nav__item {
   font-size: 1.2rem;
@@ -61,7 +65,11 @@ header {
 }
 
 .show__mobilenav {
-  display: block;
+  transform: scale(1, 1);
+}
+.show__mobilenav ul {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
 }
 
 .nav__toggle span,

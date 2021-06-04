@@ -51,7 +51,6 @@ header {
 }
 
 .nav {
-	display: none;
 	position: absolute;
 	width: $mobile-nav-width;
 	max-width: 33rem;
@@ -64,15 +63,18 @@ header {
 	background-color: $text-white;
 	border-radius: 0.3em;
 	// box-shadow: ;
-	// border: 1px solid red;
 	padding: 0.6em 1.3em 1em;
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 300ms ease-in-out;
+
 	& ul {
-		// border: 1px solid red;
+		list-style: none;
 		margin-bottom: 1.5em;
 		padding: 0em 0.8em 1.3em;
 		border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
-
-		list-style: none;
+		opacity: 0;
+		transition: opacity 150ms ease-in-out;
 	}
 
 	&__item {
@@ -82,7 +84,12 @@ header {
 }
 
 .show__mobilenav {
-	display: block;
+	transform: scale(1, 1);
+
+	& ul {
+		opacity: 1;
+		transition: opacity 250ms ease-in-out 250ms;
+	}
 }
 
 .nav__toggle span,
