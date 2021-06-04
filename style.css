@@ -32,6 +32,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 6em;
 }
 
 .nav {
@@ -45,31 +46,48 @@ header {
   margin-left: auto;
   margin-right: auto;
   background-color: white;
-  border-radius: 0.3em;
-  padding: 0.6em 1.3em 1em;
+  border-radius: 0.4em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0.3em 2em 0em;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 300ms ease-in-out;
 }
 .nav ul {
   list-style: none;
+  margin-top: 0;
   margin-bottom: 1.5em;
-  padding: 0em 0.8em 1.3em;
+  padding: 0em 0em 1.3em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
+.nav p {
+  display: inline-block;
+}
 .nav__item {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #1f3f5b;
+  cursor: pointer;
 }
-
-.show__mobilenav {
-  transform: scale(1, 1);
+.nav__auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5em;
 }
-.show__mobilenav ul {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
+.nav__auth * {
+  margin: 0.4em 0;
+  color: #1f3f5b;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.nav__auth button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 1em;
+  border: none;
+  color: white;
+  background: linear-gradient(to right, rgba(255, 143, 112, 0.95), #ff3d54);
 }
 
 .nav__toggle span,
@@ -96,22 +114,58 @@ header {
   top: 7px;
 }
 
+.show--mobilenav {
+  transform: scale(1, 1);
+}
+.show--mobilenav ul {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
 .arrow__icon {
   margin-left: 0.3em;
+  display: inline;
 }
 .arrow__icon img {
   filter: invert(49%) sepia(51%) saturate(6583%) hue-rotate(329deg) brightness(98%) contrast(107%);
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transition: transform 150ms ease-in-out;
+}
+
+.rotate--icon {
+  transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
 }
 
 .dropdown {
-  display: flex;
+  display: none;
+  width: 90%;
+  margin: 0 auto;
   flex-direction: column;
   background-color: rgba(207, 207, 207, 0.4);
   border-radius: 0.3em;
+  transform: scale(1, 0);
+  transition: transform 250ms ease-in-out;
 }
 .dropdown__item {
   color: #3f4164;
-  margin: 0.3em 0;
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}
+.dropdown__item:hover {
+  color: darkblue;
+}
+
+.show--dropdown {
+  display: flex;
+  transform: scale(1, 1);
 }
 
 .b1 {

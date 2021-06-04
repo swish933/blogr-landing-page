@@ -17,16 +17,17 @@
     <header>
         <div class="header__mobile">
             <a href="#" class="brand__logo"><img src="/images/logo.svg" alt="brand logo"></a>
-            <div class="b1" onclick="toggleNav()">
+            <div onclick="toggleNav()">
                 <p class="nav__toggle"><span></span></p>
             </div>
         </div>
 
         <nav class="nav" id="nav">
             <ul>
-                <li onclick="dropDown('productDropdown')">
-                    <p class="nav__item">Product<span class=arrow__icon><img src="/images/icon-arrow-light.svg"
-                                alt="dropdown icon"></span>
+                <li onclick="dropDown('productDropdown')" class="productDropdown">
+                    <p class="nav__item">Product
+                    <p class='arrow__icon'><img id="productarrow" src=" /images/icon-arrow-light.svg"
+                            alt="dropdown icon"></p>
                     </p>
                     <div class='dropdown' id="productDropdown">
                         <a href="#" class="dropdown__item">Overview</a>
@@ -36,9 +37,10 @@
                         <a href="#" class="dropdown__item">Integrations</a>
                     </div>
                 </li>
-                <li onclick="dropDown('companyDropdown')">
-                    <p class="nav__item">Company<span class=arrow__icon><img src="/images/icon-arrow-light.svg"
-                                alt="dropdown icon"></span>
+                <li onclick="dropDown('companyDropdown')" class="companyDropdown">
+                    <p class="nav__item">Company
+                    <p class='arrow__icon '><img id="companyarrow" src="/images/icon-arrow-light.svg"
+                            alt="dropdown icon"></p>
                     </p>
                     <div class='dropdown' id="companyDropdown">
                         <a href="#" class="dropdown__item">About</a>
@@ -47,9 +49,10 @@
                         <a href="#" class="dropdown__item">Careers</a>
                     </div>
                 </li>
-                <li onclick="dropDown('connectDropdown')">
-                    <p class="nav__item">Connect<span class=arrow__icon><img src="/images/icon-arrow-light.svg"
-                                alt="dropdown icon"></span>
+                <li onclick="dropDown('connectDropdown')" class="connectDropdown">
+                    <p class="nav__item">Connect
+                    <p class='arrow__icon'><img id="connectarrow" src="/images/icon-arrow-light.svg"
+                            alt="dropdown icon"></p>
                     </p>
                     <div class='dropdown' id="connectDropdown">
                         <a href="#" class="dropdown__item">Contact</a>
@@ -75,18 +78,7 @@
         </div>
     </header>
 
-    <!-- <section>
-        <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ratione quis ex nemo officiis voluptatum
-                est iusto dolorum in perspiciatis iure et, vel sed quia ab saepe repudiandae molestiae laborum odit ipsa
-                beatae doloremque dolor dolores delectus? Eaque natus cumque, libero impedit ex fuga odio. Sunt iste
-                consectetur incidunt deserunt omnis doloribus quidem, blanditiis sit recusandae odio et eligendi, est
-                velit quisquam. Dolore minus delectus mollitia magni porro nesciunt quaerat, dicta officia atque illo
-                omnis laudantium ea magnam? Et dolorem dicta ullam eligendi repellendus, a quasi quaerat. Impedit magnam
-                eligendi veritatis corrupti dolore, repudiandae ullam autem totam obcaecati provident perspiciatis!</p>
-        </div>
-        <div></div>
-    </section> -->
+
 
     <script src="./index.js"></script>
 </body>
