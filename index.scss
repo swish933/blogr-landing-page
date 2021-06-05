@@ -48,7 +48,8 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 6em;
+	margin-bottom: 5em;
+	margin-top: 1em;
 }
 
 .nav {
@@ -56,7 +57,7 @@ header {
 	width: $mobile-nav-width;
 	max-width: 33rem;
 	top: 50%;
-	margin-top: -10rem;
+	margin-top: -9rem;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -74,7 +75,7 @@ header {
 		margin-top: 0;
 		margin-bottom: 1.5em;
 		padding: 0em 0em 1.3em;
-		border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+		border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
 		opacity: 0;
 		transition: opacity 150ms ease-in-out;
 	}
@@ -203,7 +204,7 @@ header {
 	display: flex;
 	padding: 0.4em 0;
 	flex-direction: column;
-	background-color: rgba(207, 207, 207, 0.4);
+	background-color: rgba(228, 222, 222, 0.4);
 	border-radius: 0.3em;
 	transform-origin: top;
 	transform: scale(1, 0);

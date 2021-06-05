@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300..600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <title>Blogr|Home</title>
 </head>
@@ -17,7 +17,7 @@
     <header>
         <div class="header__mobile">
             <a href="#" class="brand__logo"><img src="/images/logo.svg" alt="brand logo"></a>
-            <div onclick="toggleNav()">
+            <div class='nav__icon' onclick="toggleNav()">
                 <p class="nav__toggle" id="hamburger"><span></span></p>
             </div>
         </div>
@@ -25,10 +25,12 @@
         <nav class="nav" id="nav">
             <ul>
                 <li onclick="dropDown('productDropdown')" class="productDropdown">
-                    <p class="nav__item">Product
-                    <p class='arrow__icon' id="productarrow"><img src=" /images/icon-arrow-light.svg"
-                            alt="dropdown icon"></p>
-                    </p>
+                    <div>
+                        <p class="nav__item">Product
+                        <p class='arrow__icon' id="productarrow"><img src=" /images/icon-arrow-light.svg"
+                                alt="dropdown icon"></p>
+                        </p>
+                    </div>
                     <div class='dropdown' id="productDropdown">
                         <a href="#" class="dropdown__item">Overview</a>
                         <a href="#" class="dropdown__item">Pricing</a>
@@ -66,7 +68,6 @@
                 <button>Sign Up</button>
             </div>
         </nav>
-
 
         <div class="intro">
             <h1 class="intro__header">A modern publishing platform</h1>
