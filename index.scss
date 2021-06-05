@@ -112,6 +112,33 @@ header {
 	}
 }
 
+.nav__close span,
+.nav__close span::before,
+.nav__close span::after {
+	display: block;
+	width: 2em;
+	height: 2px;
+	background-color: white;
+	position: relative;
+	visibility: hidden;
+}
+
+.nav__close span::before,
+.nav__close span::after {
+	visibility: visible;
+	content: '';
+	position: absolute;
+}
+
+.nav__close span::before {
+	// bottom: 3px;
+	transform: rotate(45deg);
+}
+.nav__close span::after {
+	// top: 3px;
+	transform: rotate(-45deg);
+}
+
 .nav__toggle span,
 .nav__toggle span::before,
 .nav__toggle span::after {
@@ -162,27 +189,32 @@ header {
 }
 
 .rotate--icon {
-	transform: rotate(360deg);
-	-ms-transform: rotate(360deg);
-	-moz-transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
-	-o-transform: rotate(360deg);
+	transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
 }
 
 .dropdown {
-	display: none;
 	width: 90%;
 	margin: 0 auto;
+	height: 0;
+	display: flex;
+	padding: 0.4em 0;
 	flex-direction: column;
 	background-color: rgba(207, 207, 207, 0.4);
 	border-radius: 0.3em;
+	transform-origin: top;
 	transform: scale(1, 0);
-	transition: transform 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
 
 	&__item {
 		color: $bg-lightblue;
-		margin: 0.4rem 0;
+		margin: 0.4rem 0 0.8rem;
 		font-size: 1rem;
+		opacity: 0;
+		transition: opacity 150ms ease-in-out;
 	}
 
 	&__item:hover {
@@ -191,11 +223,15 @@ header {
 }
 
 .show--dropdown {
-	display: flex;
+	height: auto;
 	transform: scale(1, 1);
+	& .dropdown__item {
+		opacity: 1;
+		transition: opacity 250ms ease-in-out 150ms;
+	}
 }
 
 .b1 {
 	border: 1px solid blue;
-	padding: 0px 6px;
+	// padding: 0px 6px;
 }

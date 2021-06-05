@@ -1,25 +1,31 @@
+function toggleNav() {
+	document.getElementById('nav').classList.toggle('show--mobilenav');
+	let mobileNavIcon = document.getElementById('hamburger');
+	if (mobileNavIcon.classList.contains('nav__toggle')) {
+		mobileNavIcon.classList.remove('nav__toggle');
+		mobileNavIcon.classList.add('nav__close');
+	} else {
+		mobileNavIcon.classList.remove('nav__close');
+		mobileNavIcon.classList.add('nav__toggle');
+	}
+}
+
 function dropDown(str) {
 	document.getElementById(str).classList.toggle('show--dropdown');
 
-	// switch (str) {
-	// 	case 'productDropdown':
-	// 		document.getElementById('productarrow').classList.toggle('rotate--icon');
-	// 		break;
-	// 	case 'companyDropdown':
-	// 		document.getElementById('companyarrow').classList.toggle('rotate--icon');
-	// 		break;
-	// 	case 'connectDropdown':
-	// 		document.getElementById('connectarrow').classList.toggle('rotate--icon');
-	// 		break;
-	// 	default:
-	// 		return;
-	// }
-
-	// document.get;
-}
-
-function toggleNav() {
-	document.getElementById('nav').classList.toggle('show--mobilenav');
+	switch (str) {
+		case 'productDropdown':
+			document.querySelector('#productarrow').classList.toggle('rotate--icon');
+			break;
+		case 'companyDropdown':
+			document.querySelector('#companyarrow').classList.toggle('rotate--icon');
+			break;
+		case 'connectDropdown':
+			document.querySelector('#connectarrow').classList.toggle('rotate--icon');
+			break;
+		default:
+			return;
+	}
 }
 
 window.addEventListener('click', function (ev) {
