@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header__mobile">
-            <a href="#" class="brand__logo"><img src="/images/logo.svg" alt="brand logo"></a>
+            <div class="brand__logo"><img src="/images/logo.svg" alt="brand logo" width="90px"></div>
             <div class='nav__icon' onclick="toggleNav()">
                 <p class="nav__toggle" id="hamburger"><span></span></p>
             </div>
@@ -24,12 +24,12 @@
 
         <nav class="nav" id="nav">
             <ul>
-                <li onclick="dropDown('productDropdown')" class="productDropdown">
+                <li class="productDropdown">
                     <div>
-                        <p class="nav__item">Product
+                        <p class="nav__item" onclick="dropDown('productDropdown')">Product</p>
                         <p class='arrow__icon' id="productarrow"><img src=" /images/icon-arrow-light.svg"
                                 alt="dropdown icon"></p>
-                        </p>
+
                     </div>
                     <div class='dropdown' id="productDropdown">
                         <a href="#" class="dropdown__item">Overview</a>
@@ -39,11 +39,13 @@
                         <a href="#" class="dropdown__item">Integrations</a>
                     </div>
                 </li>
-                <li onclick="dropDown('companyDropdown')" class="companyDropdown">
-                    <p class="nav__item">Company
-                    <p class='arrow__icon' id="companyarrow"><img src="/images/icon-arrow-light.svg"
-                            alt="dropdown icon"></p>
-                    </p>
+                <li class="companyDropdown">
+                    <div>
+                        <p class="nav__item" onclick="dropDown('companyDropdown')">Company</p>
+                        <p class='arrow__icon' id="companyarrow"><img src="/images/icon-arrow-light.svg"
+                                alt="dropdown icon">
+                        </p>
+                    </div>
                     <div class='dropdown' id="companyDropdown">
                         <a href="#" class="dropdown__item">About</a>
                         <a href="#" class="dropdown__item">Team</a>
@@ -51,11 +53,13 @@
                         <a href="#" class="dropdown__item">Careers</a>
                     </div>
                 </li>
-                <li onclick="dropDown('connectDropdown')" class="connectDropdown">
-                    <p class="nav__item">Connect
-                    <p class='arrow__icon' id="connectarrow"><img src="/images/icon-arrow-light.svg"
-                            alt="dropdown icon"></p>
-                    </p>
+                <li class="connectDropdown">
+                    <div>
+                        <p class="nav__item" onclick="dropDown('connectDropdown')">Connect</p>
+                        <p class='arrow__icon' id="connectarrow"><img src="/images/icon-arrow-light.svg"
+                                alt="dropdown icon">
+                        </p>
+                    </div>
                     <div class='dropdown' id="connectDropdown">
                         <a href="#" class="dropdown__item">Contact</a>
                         <a href="#" class="dropdown__item">Newsletter</a>
