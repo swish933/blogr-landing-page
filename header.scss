@@ -7,11 +7,13 @@ $text-white: hsl(0, 0%, 100%);
 $text-blue: hsl(208, 49%, 24%);
 $text-red: hsl(356, 100%, 66%);
 $footer-text-gray: hsl(240, 2%, 79%);
-$body-text-blue: hsl(207, 13%, 34%);
+$body-text-blue: hsl(206, 11%, 37%);
 $hover-red: hsl(355, 100%, 74%);
 $mobile-nav-width: 83%;
 $mobile-nav-height: 105%;
 $bg-dropdown: hsla(240, 2%, 79%, 0.8);
+$ff-ubuntu: 'Ubuntu', sans-serif;
+$ff-overpass: 'Overpass', sans-serif;
 
 *,
 *::before,
@@ -41,6 +43,13 @@ header {
 	background-repeat: no-repeat;
 	background-position: 33% 33%, center;
 	background-size: 250% auto;
+	border-bottom-left-radius: 7em;
+
+	@media only screen and (min-width: 760px) {
+		height: 62vh;
+		background-size: 200% auto;
+		background-position: 20% 50%, center;
+	}
 }
 
 .header__mobile {
@@ -50,7 +59,7 @@ header {
 	margin-bottom: 5em;
 	margin-top: 1em;
 
-	@media only screen and (min-width: 793px) {
+	@media only screen and (min-width: 760px) {
 		& {
 			all: unset;
 			display: inline-block;
@@ -65,7 +74,7 @@ header {
 	width: $mobile-nav-width;
 	max-width: 33rem;
 	top: 50%;
-	margin-top: -9rem;
+	margin-top: -9em;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -77,6 +86,8 @@ header {
 	transform: scale(1, 0);
 	transform-origin: top;
 	transition: transform 300ms ease-in-out;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
 
 	& ul {
 		list-style: none;
@@ -93,7 +104,7 @@ header {
 	}
 
 	&__item {
-		font-size: 1.1rem;
+		font-size: 1rem;
 		color: $text-blue;
 		cursor: pointer;
 	}
@@ -113,14 +124,20 @@ header {
 
 		& button {
 			padding: 0.7em 1.5em;
-			border-radius: 1em;
+			border-radius: 2em;
 			border: none;
 			color: $text-white;
 			background: linear-gradient(to right, $bg-lightred, $bg-red);
+			font-family: $ff-ubuntu;
+			font-weight: 500;
+
+			&:hover {
+				background: $hover-red;
+			}
 		}
 	}
 
-	@media only screen and (min-width: 793px) {
+	@media only screen and (min-width: 760px) {
 		& {
 			all: unset;
 			display: inline-flex;
@@ -129,6 +146,7 @@ header {
 			width: 73%;
 			margin-left: 2em;
 			vertical-align: top;
+			font-family: $ff-ubuntu;
 		}
 
 		& ul {
@@ -147,10 +165,15 @@ header {
 
 		&__item {
 			color: $text-white;
+			font-size: 0.9rem;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 
 		& li > div {
-			margin: 1em 2.2em 1em 0;
+			margin: 1em 2.4em 1em 0;
 		}
 
 		& p {
@@ -169,11 +192,10 @@ header {
 			& * {
 				margin: 0em 0.4em;
 				color: $text-white;
-				font-size: 1rem;
+				font-size: 0.9rem;
 			}
 
 			& button {
-				border-radius: 1em;
 				border: none;
 				color: $bg-red;
 				background: $text-white;
@@ -257,7 +279,7 @@ header {
 		transition: transform 150ms ease-in-out;
 	}
 
-	@media only screen and (min-width: 793px) {
+	@media only screen and (min-width: 760px) {
 		& img {
 			filter: invert(0%) sepia(1%) saturate(0%) hue-rotate(181deg)
 				brightness(96%) contrast(104%);
@@ -287,21 +309,30 @@ header {
 	transition: all 250ms ease-in-out;
 
 	&__item {
-		color: $bg-lightblue;
+		color: $body-text-blue;
 		margin: 0.4rem 0 0.8rem;
 		font-size: 1rem;
 		opacity: 0;
-		transition: opacity 150ms ease-in-out;
+		transition: opacity 100ms ease-in-out;
 	}
 
 	&__item:hover {
-		color: darkblue;
+		color: $bg-darkblue;
 	}
 
-	@media only screen and (min-width: 793px) {
+	@media only screen and (min-width: 760px) {
 		& {
 			background-color: $text-white;
 			position: absolute;
+			margin-right: 10px;
+			text-align: left;
+			padding-top: 0.4em;
+			padding-left: 0.7em;
+		}
+
+		&__item {
+			font-size: 0.9rem;
+			font-weight: 500;
 		}
 	}
 }
@@ -314,12 +345,73 @@ header {
 		transition: opacity 250ms ease-in-out 150ms;
 	}
 
-	@media only screen and (min-width: 793px) {
+	@media only screen and (min-width: 760px) {
 		& {
 			position: absolute;
 			height: auto;
 			transform: scale(1, 1);
 			top: 3em;
+		}
+	}
+}
+
+.intro {
+	margin-top: -3em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: $ff-overpass;
+	color: $text-white;
+
+	&__header {
+		width: 100%;
+		font-size: 2.2rem;
+		margin-bottom: 0.6em;
+	}
+	& p {
+		width: 65%;
+		margin: 0em 0 3em;
+	}
+
+	&__btns {
+		display: flex;
+
+		& button {
+			padding: 0.9em 1.5em;
+			border-radius: 2em;
+			font-family: $ff-ubuntu;
+			font-weight: 500;
+			font-size: 1rem;
+		}
+
+		& button:first-child {
+			border: none;
+			background: $text-white;
+			color: $text-red;
+
+			&:hover {
+				background: $hover-red;
+				color: $text-white;
+			}
+		}
+
+		& button:nth-child(2) {
+			border: 1px solid white;
+			color: $text-white;
+			background: transparent;
+			margin-left: 1em;
+
+			&:hover {
+				background: $text-white;
+				color: $text-red;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 760px) {
+		& {
+			margin-top: 4em;
 		}
 	}
 }
