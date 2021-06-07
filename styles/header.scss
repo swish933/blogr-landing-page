@@ -65,6 +65,8 @@ header {
 			display: inline-block;
 			padding: 5px 0;
 			vertical-align: top;
+			margin-top: 2em;
+			margin-left: -0em;
 		}
 	}
 }
@@ -144,9 +146,10 @@ header {
 			align-items: center;
 			justify-content: space-between;
 			width: 73%;
-			margin-left: 2em;
+			margin-left: 3em;
 			vertical-align: top;
 			font-family: $ff-ubuntu;
+			margin-top: 2em;
 		}
 
 		& ul {

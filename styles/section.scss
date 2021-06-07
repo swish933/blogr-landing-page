@@ -1,0 +1,57 @@
+$bg-darkblue: hsl(237, 17%, 21%);
+$bg-lightblue: hsl(237, 23%, 32%);
+$footer-bg: hsl(240, 10%, 16%);
+$text-blue: hsl(208, 49%, 24%);
+$footer-text-gray: hsl(240, 2%, 79%);
+$body-text-blue: hsl(206, 11%, 37%);
+$bg-dropdown: hsla(240, 2%, 79%, 0.8);
+$ff-overpass: 'Overpass', sans-serif;
+
+section {
+	margin-top: 3em;
+}
+
+.section__one {
+	padding: 1.5rem 2.6rem 0rem;
+	font-family: $ff-overpass;
+	text-align: center;
+
+	& h2 {
+		color: $text-blue;
+	}
+
+	& p {
+		color: $body-text-blue;
+	}
+
+	@media only screen and (min-width: 850px) {
+		&__content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+
+			&__item1 {
+				grid-area: 1 / 1 / span 1 / span 1;
+			}
+			&__item2 {
+				grid-area: 2 / 1 / span 1 / span 1;
+			}
+
+			.editor__img {
+				height: 70vh;
+				background: url(/images/illustration-editor-desktop.svg) left no-repeat;
+
+				grid-area: 1 / 2 / span 2 / span 2;
+			}
+		}
+	}
+}
+
+.editor__img {
+	height: 52vh;
+	background: url(/images/illustration-editor-mobile.svg) center no-repeat;
+}
+
+.b1 {
+	border: 1px solid salmon;
+}
