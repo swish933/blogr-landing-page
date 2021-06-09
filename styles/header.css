@@ -29,7 +29,7 @@ header {
 }
 @media only screen and (min-width: 760px) {
   header {
-    height: 62vh;
+    height: 65vh;
     background-size: 200% auto;
     background-position: 20% 50%, center;
   }

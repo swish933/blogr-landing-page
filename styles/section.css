@@ -1,11 +1,16 @@
 section {
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 .section__one {
   padding: 1.5rem 2.6rem 0rem;
+  margin-top: 2em;
   font-family: "Overpass", sans-serif;
   text-align: center;
+  background: url(/images/illustration-editor-mobile.svg) 50% 23% no-repeat;
+}
+.section__one__sub1 {
+  margin-top: 26em;
 }
 .section__one h2 {
   color: #1f3f5b;
@@ -14,31 +19,24 @@ section {
   color: #546069;
 }
 @media only screen and (min-width: 850px) {
+  .section__one {
+    background: url(/images/illustration-editor-desktop.svg) 135% 75%/58% no-repeat;
+    padding: 5em 4em 6em;
+  }
   .section__one__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 6em;
   }
-  .section__one__content__item1 {
-    grid-area: 1/1/span 1/span 1;
+  .section__one__sub1 {
+    margin-top: 0em;
   }
-  .section__one__content__item2 {
-    grid-area: 2/1/span 1/span 1;
+  .section__one__sub1, .section__one__sub2 {
+    text-align: left;
+    width: 43%;
+    margin-left: 3.5em;
   }
-  .section__one__content .editor__img {
-    height: 70vh;
-    background: url(/images/illustration-editor-desktop.svg) left no-repeat;
-    grid-area: 1/2/span 2/span 2;
-  }
-}
-
-.editor__img {
-  height: 52vh;
-  background: url(/images/illustration-editor-mobile.svg) center no-repeat;
-}
-
-.b1 {
-  border: 1px solid salmon;
 }
 
 /*# sourceMappingURL=section.css.map */
