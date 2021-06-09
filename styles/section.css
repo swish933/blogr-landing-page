@@ -20,7 +20,7 @@ section {
 }
 @media only screen and (min-width: 850px) {
   .section__one {
-    background: url(/images/illustration-editor-desktop.svg) 135% 75%/58% no-repeat;
+    background: url(/images/illustration-editor-desktop.svg) 135% 75%/56% no-repeat;
     padding: 5em 4em 6em;
   }
   .section__one__content {
