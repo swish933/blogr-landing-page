@@ -2,6 +2,7 @@ $bg-darkblue: hsl(237, 17%, 21%);
 $bg-lightblue: hsl(237, 23%, 32%);
 $footer-bg: hsl(240, 10%, 16%);
 $text-blue: hsl(208, 49%, 24%);
+$text-white: hsl(0, 0%, 100%);
 $footer-text-gray: hsl(240, 2%, 79%);
 $body-text-blue: hsl(206, 11%, 37%);
 $bg-dropdown: hsla(240, 2%, 79%, 0.8);
@@ -9,17 +10,30 @@ $ff-overpass: 'Overpass', sans-serif;
 
 section {
 	margin-top: 2em;
+	font-family: $ff-overpass;
+
+	& p {
+		line-height: 1.8em;
+	}
 }
 
+/*********section one*********/
 .section__one {
 	padding: 1.5rem 2.6rem 0rem;
 	margin-top: 2em;
-	font-family: $ff-overpass;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background: url(/images/illustration-editor-mobile.svg) 50% 23% no-repeat;
+
+	& h2 {
+		color: $text-blue;
+	}
+
+	& p {
+		color: $body-text-blue;
+	}
 
 	&__sub1 {
 		margin-top: 26em;
@@ -32,14 +46,6 @@ section {
 	&__sub1,
 	&__sub2 {
 		max-width: 36em;
-	}
-
-	& h2 {
-		color: $text-blue;
-	}
-
-	& p {
-		color: $body-text-blue;
 	}
 
 	@media only screen and (min-width: 850px) {
@@ -70,4 +76,56 @@ section {
 			margin-left: 3.5em;
 		}
 	}
+}
+
+/*********section two*********/
+.section__two {
+	margin-top: 14em;
+	height: 75vh;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	background-image: url(/images/bg-pattern-circles.svg),
+		linear-gradient(155deg, $bg-darkblue, $bg-lightblue);
+	background-repeat: no-repeat;
+	background-position: 50% -350px, top;
+	background-size: 150%, cover;
+	border-top-right-radius: 7em;
+	border-bottom-left-radius: 7em;
+	// overflow-y: hidden;
+
+	& h2 {
+		font-size: 1.9rem;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		min-height: 55vh;
+		top: -12em;
+		width: 24em;
+		// border: 1px solid red;
+		background-image: url(/images/illustration-phones.svg);
+		background-repeat: no-repeat;
+		background-position: 15% 10%;
+		background-size: 100%;
+	}
+
+	&__content {
+		width: 90%;
+		max-width: 36em;
+		color: $text-white;
+		// border: 1px solid rgb(104, 90, 117);
+		padding: 10em 1.7em 0em;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		margin-bottom: 2em;
+	}
+}
+
+.b1 {
+	border: 2px solid salmon;
 }

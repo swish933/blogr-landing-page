@@ -1,16 +1,26 @@
 section {
   margin-top: 2em;
+  font-family: "Overpass", sans-serif;
+}
+section p {
+  line-height: 1.8em;
 }
 
+/*********section one*********/
 .section__one {
   padding: 1.5rem 2.6rem 0rem;
   margin-top: 2em;
-  font-family: "Overpass", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: url(/images/illustration-editor-mobile.svg) 50% 23% no-repeat;
+}
+.section__one h2 {
+  color: #1f3f5b;
+}
+.section__one p {
+  color: #546069;
 }
 .section__one__sub1 {
   margin-top: 26em;
@@ -20,12 +30,6 @@ section {
 }
 .section__one__sub1, .section__one__sub2 {
   max-width: 36em;
-}
-.section__one h2 {
-  color: #1f3f5b;
-}
-.section__one p {
-  color: #546069;
 }
 @media only screen and (min-width: 850px) {
   .section__one {
@@ -49,6 +53,51 @@ section {
     max-width: 43%;
     margin-left: 3.5em;
   }
+}
+
+/*********section two*********/
+.section__two {
+  margin-top: 14em;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-image: url(/images/bg-pattern-circles.svg), linear-gradient(155deg, #2c2d3f, #3f4164);
+  background-repeat: no-repeat;
+  background-position: 50% -350px, top;
+  background-size: 150%, cover;
+  border-top-right-radius: 7em;
+  border-bottom-left-radius: 7em;
+}
+.section__two h2 {
+  font-size: 1.9rem;
+}
+.section__two::before {
+  content: "";
+  position: absolute;
+  min-height: 55vh;
+  top: -12em;
+  width: 24em;
+  background-image: url(/images/illustration-phones.svg);
+  background-repeat: no-repeat;
+  background-position: 15% 10%;
+  background-size: 100%;
+}
+.section__two__content {
+  width: 90%;
+  max-width: 36em;
+  color: white;
+  padding: 10em 1.7em 0em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 2em;
+}
+
+.b1 {
+  border: 2px solid salmon;
 }
 
 /*# sourceMappingURL=section.css.map */
