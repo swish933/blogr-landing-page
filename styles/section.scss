@@ -16,10 +16,22 @@ section {
 	margin-top: 2em;
 	font-family: $ff-overpass;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background: url(/images/illustration-editor-mobile.svg) 50% 23% no-repeat;
 
 	&__sub1 {
 		margin-top: 26em;
+	}
+
+	&__sub2 {
+		margin-top: 3em;
+	}
+
+	&__sub1,
+	&__sub2 {
+		max-width: 36em;
 	}
 
 	& h2 {
@@ -47,10 +59,14 @@ section {
 			margin-top: 0em;
 		}
 
+		&__sub2 {
+			margin-top: 2em;
+		}
+
 		&__sub1,
 		&__sub2 {
 			text-align: left;
-			width: 43%;
+			max-width: 43%;
 			margin-left: 3.5em;
 		}
 	}

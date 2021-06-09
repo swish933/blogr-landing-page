@@ -7,10 +7,19 @@ section {
   margin-top: 2em;
   font-family: "Overpass", sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: url(/images/illustration-editor-mobile.svg) 50% 23% no-repeat;
 }
 .section__one__sub1 {
   margin-top: 26em;
+}
+.section__one__sub2 {
+  margin-top: 3em;
+}
+.section__one__sub1, .section__one__sub2 {
+  max-width: 36em;
 }
 .section__one h2 {
   color: #1f3f5b;
@@ -32,9 +41,12 @@ section {
   .section__one__sub1 {
     margin-top: 0em;
   }
+  .section__one__sub2 {
+    margin-top: 2em;
+  }
   .section__one__sub1, .section__one__sub2 {
     text-align: left;
-    width: 43%;
+    max-width: 43%;
     margin-left: 3.5em;
   }
 }
