@@ -84,15 +84,15 @@ section {
 	height: 75vh;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	position: relative;
 	background-image: url(/images/bg-pattern-circles.svg),
 		linear-gradient(155deg, $bg-darkblue, $bg-lightblue);
 	background-repeat: no-repeat;
-	background-position: 50% -350px, top;
+	background-position: 50% -350px, center;
 	background-size: 150%, cover;
 	border-top-right-radius: 7em;
 	border-bottom-left-radius: 7em;
-	// overflow-y: hidden;
 
 	& h2 {
 		font-size: 1.9rem;
@@ -104,7 +104,6 @@ section {
 		min-height: 55vh;
 		top: -12em;
 		width: 24em;
-		// border: 1px solid red;
 		background-image: url(/images/illustration-phones.svg);
 		background-repeat: no-repeat;
 		background-position: 15% 10%;
@@ -115,7 +114,6 @@ section {
 		width: 90%;
 		max-width: 36em;
 		color: $text-white;
-		// border: 1px solid rgb(104, 90, 117);
 		padding: 10em 1.7em 0em;
 		text-align: center;
 		display: flex;
@@ -124,8 +122,44 @@ section {
 		align-content: center;
 		margin-bottom: 2em;
 	}
+
+	@media only screen and (min-width: 850px) {
+		& {
+			margin-top: 2em;
+			height: 52vh;
+			background-position: -20% -350px, center;
+			background-size: 60%, cover;
+			justify-content: space-around;
+		}
+
+		& h2 {
+			font-size: 1.7rem;
+		}
+
+		&::before {
+			// display: none;
+			top: -4em;
+			left: 4em;
+			width: 28em;
+			min-height: 64vh;
+			background-position: 30% 40%;
+			background-size: 105%;
+		}
+
+		&__content {
+			// width: 55%;
+			text-align: left;
+			padding: 0em 3em 0em;
+			margin-bottom: 0em;
+			// margin-left: 40%;
+		}
+
+		&__filler {
+			width: 70em;
+		}
+	}
 }
 
 .b1 {
-	border: 2px solid salmon;
+	border: 1px solid salmon;
 }
