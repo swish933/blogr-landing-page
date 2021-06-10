@@ -1,0 +1,87 @@
+$footer-bg: hsl(240, 10%, 16%);
+$text-white: hsl(0, 0%, 100%);
+$footer-text-gray: hsl(240, 2%, 79%);
+$body-text-blue: hsl(206, 11%, 37%);
+$ff-ubuntu: 'Ubuntu', sans-serif;
+$ff-overpass: 'Overpass', sans-serif;
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+.footer {
+	background: $footer-bg;
+	margin-top: 6em;
+	border-top-right-radius: 7em;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: $ff-ubuntu;
+
+	&__content {
+		margin: 4em 0;
+		display: flex;
+		flex-direction: column;
+
+		& > div:first-of-type {
+			margin-top: 4em;
+		}
+
+		& div {
+			display: flex;
+			padding: 1em;
+			flex-flow: column nowrap;
+		}
+	}
+
+	& p {
+		color: $text-white;
+		margin-bottom: 1.5em;
+		font-size: 1rem;
+	}
+
+	& a:hover {
+		text-decoration: underline;
+	}
+
+	& a:visited,
+	& a:link {
+		font-size: 0.9rem;
+		margin-bottom: 0.5em;
+		color: $footer-text-gray;
+	}
+
+	@media only screen and (min-width: 660px) {
+		& {
+			text-align: left;
+		}
+		& p {
+			padding-top: 0;
+			margin-top: 0;
+		}
+		&__logo {
+			align-self: flex-start;
+		}
+
+		&__content {
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-items: stretch;
+			width: 80%;
+
+			& > div:first-of-type {
+				margin-top: 0;
+			}
+
+			& div {
+				padding: 0.5em 1.5em 1em;
+			}
+		}
+	}
+}
