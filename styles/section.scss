@@ -129,7 +129,7 @@ section {
 		& {
 			margin-top: 2em;
 			height: 51vh;
-			background-position: -20% -350px, center;
+			background-position: -20% -20em, center;
 			background-size: 60%, cover;
 			// justify-content: flex-end;
 		}
@@ -167,6 +167,9 @@ section {
 	&__content {
 		margin-top: 23em;
 		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		& h2 {
 			color: $text-blue;
@@ -176,8 +179,31 @@ section {
 			color: $body-text-blue;
 		}
 
+		&__sub1,
+		&__sub2 {
+			max-width: 36em;
+		}
+
 		&__sub2 {
 			margin-top: 3em;
+		}
+	}
+
+	@media only screen and (min-width: 850px) {
+		& {
+			padding: 5em 4em 6em;
+			margin-top: 0;
+			background: url(/images/illustration-laptop-desktop.svg) -85% 6em / 75% no-repeat;
+		}
+		&__content {
+			align-items: flex-end;
+			text-align: left;
+			margin-top: 9em;
+
+			&__sub1,
+			&__sub2 {
+				max-width: 43%;
+			}
 		}
 	}
 }
