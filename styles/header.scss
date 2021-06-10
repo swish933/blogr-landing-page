@@ -45,6 +45,12 @@ header {
 	background-size: 250% auto;
 	border-bottom-left-radius: 7em;
 
+	@media only screen and (max-width: 330px) {
+		& {
+			min-height: 90vh;
+		}
+	}
+
 	@media only screen and (min-width: 760px) {
 		& {
 			min-height: 55vh;
@@ -421,6 +427,22 @@ header {
 				background: $text-white;
 				color: $text-red;
 			}
+		}
+	}
+
+	@media only screen and (max-width: 360px) {
+		& p {
+			margin-bottom: 2em;
+		}
+
+		&__header {
+			margin-bottom: 0.4em;
+		}
+	}
+
+	@media only screen and (max-width: 330px) {
+		& p {
+			margin-bottom: 1.6em;
 		}
 	}
 

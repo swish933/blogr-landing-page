@@ -27,6 +27,11 @@ header {
   background-size: 250% auto;
   border-bottom-left-radius: 7em;
 }
+@media only screen and (max-width: 330px) {
+  header {
+    min-height: 90vh;
+  }
+}
 @media only screen and (min-width: 760px) {
   header {
     min-height: 55vh;
@@ -367,6 +372,19 @@ header {
 .intro__btns button:nth-child(2):hover {
   background: white;
   color: #ff525d;
+}
+@media only screen and (max-width: 360px) {
+  .intro p {
+    margin-bottom: 2em;
+  }
+  .intro__header {
+    margin-bottom: 0.4em;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .intro p {
+    margin-bottom: 1.6em;
+  }
 }
 @media only screen and (min-width: 760px) {
   .intro {

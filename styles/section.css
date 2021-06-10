@@ -32,6 +32,11 @@ section p {
 .section__one__sub1, .section__one__sub2 {
   max-width: 36em;
 }
+@media only screen and (max-width: 360px) {
+  .section__one {
+    background-size: 90%;
+  }
+}
 @media only screen and (min-width: 850px) {
   .section__one {
     background: url(/images/illustration-editor-desktop.svg) 135% 75%/56% no-repeat;
@@ -60,7 +65,7 @@ section p {
 .section__two {
   margin-top: 14em;
   width: 100%;
-  height: 75vh;
+  min-height: 77vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,12 +83,13 @@ section p {
 .section__two::before {
   content: "";
   position: absolute;
+  border: 1px solid blue;
   min-height: 55vh;
   top: -12em;
   width: 24em;
   background-image: url(/images/illustration-phones.svg);
   background-repeat: no-repeat;
-  background-position: 15% 10%;
+  background-position: center 10%;
   background-size: 100%;
 }
 .section__two__content {
@@ -98,6 +104,11 @@ section p {
   align-content: center;
   margin-bottom: 2em;
 }
+@media only screen and (max-width: 360px) {
+  .section__two::before {
+    background-size: 90%;
+  }
+}
 @media only screen and (min-width: 850px) {
   .section__two {
     margin-top: 2em;
@@ -109,12 +120,12 @@ section p {
     font-size: 1.7rem;
   }
   .section__two::before {
-    top: -4em;
+    top: -3em;
     left: 4em;
     width: 28em;
     min-height: 64vh;
-    background-position: 30% 40%;
-    background-size: 106%;
+    background-position: 30% 37%;
+    background-size: 100%;
   }
   .section__two__content {
     width: 45%;
@@ -125,6 +136,7 @@ section p {
   }
 }
 
+/*********section three*********/
 .section__three {
   padding: 1.5rem 2.6rem 0rem;
   background: url(/images/illustration-laptop-mobile.svg) no-repeat;
@@ -132,7 +144,7 @@ section p {
   margin-top: 7em;
 }
 .section__three__content {
-  margin-top: 23em;
+  margin-top: 18em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -148,7 +160,12 @@ section p {
   max-width: 36em;
 }
 .section__three__content__sub2 {
-  margin-top: 3em;
+  margin-top: 1.5em;
+}
+@media only screen and (max-width: 360px) {
+  .section__three {
+    background-size: 115%;
+  }
 }
 @media only screen and (min-width: 850px) {
   .section__three {
@@ -164,10 +181,9 @@ section p {
   .section__three__content__sub1, .section__three__content__sub2 {
     max-width: 43%;
   }
-}
-
-.b1 {
-  border: 1px solid salmon;
+  .section__three__content__sub2 {
+    margin-top: 2.5em;
+  }
 }
 
 /*# sourceMappingURL=section.css.map */
