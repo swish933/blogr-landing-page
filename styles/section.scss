@@ -20,23 +20,24 @@ section {
 /*********section one*********/
 .section__one {
 	padding: 1.5rem 2.6rem 0rem;
-	margin-top: 2em;
+	margin-top: 4em;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: url(/images/illustration-editor-mobile.svg) 50% 23% no-repeat;
+	background: url(/images/illustration-editor-mobile.svg) 50% 17% no-repeat;
 
 	& h2 {
 		color: $text-blue;
+		margin-bottom: 0;
 	}
 
 	& p {
 		color: $body-text-blue;
 	}
 
-	&__sub1 {
-		margin-top: 26em;
+	&__content {
+		margin-top: 25em;
 	}
 
 	&__sub2 {
@@ -153,6 +154,30 @@ section {
 			padding: 0em 3em 0em;
 			margin-bottom: 0em;
 			margin-left: 55%;
+		}
+	}
+}
+
+.section__three {
+	padding: 1.5rem 2.6rem 0rem;
+	background: url(/images/illustration-laptop-mobile.svg) no-repeat;
+	background-position: 50% 0%;
+	margin-top: 7em;
+
+	&__content {
+		margin-top: 23em;
+		text-align: center;
+
+		& h2 {
+			color: $text-blue;
+		}
+
+		& p {
+			color: $body-text-blue;
+		}
+
+		&__sub2 {
+			margin-top: 3em;
 		}
 	}
 }

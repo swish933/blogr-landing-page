@@ -9,21 +9,22 @@ section p {
 /*********section one*********/
 .section__one {
   padding: 1.5rem 2.6rem 0rem;
-  margin-top: 2em;
+  margin-top: 4em;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(/images/illustration-editor-mobile.svg) 50% 23% no-repeat;
+  background: url(/images/illustration-editor-mobile.svg) 50% 17% no-repeat;
 }
 .section__one h2 {
   color: #1f3f5b;
+  margin-bottom: 0;
 }
 .section__one p {
   color: #546069;
 }
-.section__one__sub1 {
-  margin-top: 26em;
+.section__one__content {
+  margin-top: 25em;
 }
 .section__one__sub2 {
   margin-top: 3em;
@@ -122,6 +123,26 @@ section p {
     margin-bottom: 0em;
     margin-left: 55%;
   }
+}
+
+.section__three {
+  padding: 1.5rem 2.6rem 0rem;
+  background: url(/images/illustration-laptop-mobile.svg) no-repeat;
+  background-position: 50% 0%;
+  margin-top: 7em;
+}
+.section__three__content {
+  margin-top: 23em;
+  text-align: center;
+}
+.section__three__content h2 {
+  color: #1f3f5b;
+}
+.section__three__content p {
+  color: #546069;
+}
+.section__three__content__sub2 {
+  margin-top: 3em;
 }
 
 .b1 {
