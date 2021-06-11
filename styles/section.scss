@@ -25,7 +25,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: url(/images/illustration-editor-mobile.svg) 50% 17% no-repeat;
+	background: url(images/illustration-editor-mobile.svg) 50% 17% no-repeat;
 
 	& h2 {
 		color: $text-blue;
@@ -57,7 +57,7 @@ section {
 
 	@media only screen and (min-width: 850px) {
 		& {
-			background: url(/images/illustration-editor-desktop.svg) 135% 75% / 56%
+			background: url(images/illustration-editor-desktop.svg) 135% 75% / 56%
 				no-repeat;
 			padding: 5em 4em 6em;
 		}
@@ -94,7 +94,7 @@ section {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	background-image: url(/images/bg-pattern-circles.svg),
+	background-image: url(images/bg-pattern-circles.svg),
 		linear-gradient(155deg, $bg-darkblue, $bg-lightblue);
 	background-repeat: no-repeat;
 	background-position: 50% -350px, center;
@@ -112,7 +112,7 @@ section {
 		min-height: 55vh;
 		top: -12em;
 		width: 24em;
-		background-image: url(/images/illustration-phones.svg);
+		background-image: url(images/illustration-phones.svg);
 		background-repeat: no-repeat;
 		background-position: center 10%;
 		background-size: 100%;
@@ -173,7 +173,7 @@ section {
 
 .section__three {
 	padding: 1.5rem 2.6rem 0rem;
-	background: url(/images/illustration-laptop-mobile.svg) no-repeat;
+	background: url(images/illustration-laptop-mobile.svg) no-repeat;
 	background-position: 50% 0%;
 	margin-top: 7em;
 
@@ -212,7 +212,7 @@ section {
 		& {
 			padding: 5em 4em 6em;
 			margin-top: 0;
-			background: url(/images/illustration-laptop-desktop.svg) -85% 6em / 75% no-repeat;
+			background: url(images/illustration-laptop-desktop.svg) -85% 6em / 75% no-repeat;
 		}
 		&__content {
 			align-items: flex-end;

@@ -21,7 +21,7 @@ header {
   position: relative;
   padding: 1.5rem 2.6rem 0rem;
   text-align: center;
-  background-image: url(/images/bg-pattern-intro.svg), linear-gradient(120deg, rgba(255, 143, 112, 0.95) 25%, #ff3d54 59%);
+  background-image: url(images/bg-pattern-intro.svg), linear-gradient(120deg, rgba(255, 143, 112, 0.95) 25%, #ff3d54 59%);
   background-repeat: no-repeat;
   background-position: 33% 33%, center;
   background-size: 250% auto;
