@@ -390,6 +390,9 @@ header {
   .intro {
     margin-top: 4em;
   }
+  .intro__btns {
+    margin-bottom: 7em;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */
